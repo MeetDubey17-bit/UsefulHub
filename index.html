@@ -7,36 +7,5 @@
 </head>
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/index.jsx"></script>
-  <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-          const firebaseConfig = {
-              apiKey: "AIzaSyBVCLL7fIu9SuPOhqS5OzNotwwh5EOCcLU",
-                  authDomain: "bsite-e3e4d.firebaseapp.com",
-                      projectId: "bsite-e3e4d",
-                          storageBucket: "bsite-e3e4d.firebasestorage.app",
-                              messagingSenderId: "931743855419",
-                                  appId: "1:931743855419:web:67d06947ab2e2ee4927d1e"
-                                    };
-
-                                      const app = initializeApp(firebaseConfig);
-                                        const db = getFirestore(app);
-
-                                          async function loadWebsites() {
-                                              const querySnapshot = await getDocs(collection(db, "websites"));
-
-                                                  querySnapshot.forEach((doc) => {
-                                                        console.log(doc.data());
-                                                            });
-                                                              }
-
-                                                                loadWebsites();
-                                                              
-                                                          
-                                                          
-                                                          
-p</script>
 </body>
 </html>
